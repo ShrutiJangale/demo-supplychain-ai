@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+
+# Virtual envs (your venv is demoSupplyChain)
+demoSupplyChain/
+.env/
+.venv/
+venv/
+ENV/
+env/
+Scripts/
+Lib/
+pyvenv.cfg
+
+# Django/DB/media
+*.sqlite3
+db.sqlite3
+supplychain_ai/db.sqlite3
+supplychain_ai/supplyChain.db
+*.log
+
+# App artifacts
+log_summaries.json
+question_wise_summaries.json
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
