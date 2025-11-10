@@ -143,7 +143,7 @@
     <div class="sidebar">
         <h2><a href="{% url 'dashboard' %}">Supply Chain AI</a></h2>
         <button class="sidebar-btn active" onclick="loadFileSelection()">Select File</button>
-        <button class="sidebar-btn" onclick="loadUpload()">]Upload New Data</button>
+        <button class="sidebar-btn" onclick="loadUpload()">Upload New Data</button>
     </div>
     <div class="main-content">
         <div id="pageLoader" class="loading-overlay">Opening file…</div>
@@ -151,7 +151,7 @@
             <h1>Select File</h1>
             <div class="select-row">
                 <select id="fileSelect" class="file-select">
-                    <option value="" selected disabled>Select a file by number…</option>
+                    <option value="" selected disabled>Select a file to view…</option>
                     {% if requests %}
                         {% for req in requests %}
                             <option value="{{ req.file_id }}">

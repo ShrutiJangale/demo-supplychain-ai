@@ -1,4 +1,4 @@
-﻿# Python
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -24,7 +24,6 @@ share/python-wheels/
 MANIFEST
 
 # Virtual Environment
-demoSupplyChain/
 venv/
 ENV/
 env/
@@ -81,3 +80,4 @@ celerybeat.pid
 # Project specific
 *.json.bak
 *.db-journal
+

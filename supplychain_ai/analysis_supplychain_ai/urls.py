@@ -7,5 +7,5 @@ urlpatterns = [
     path('files/', views.file_selection, name='file_selection'),
     path('results/<int:file_id>/', views.results_page, name='results_page'),
     path('summary/overall/<int:file_id>/', views.overall_summary_page, name='overall_summary_page'),
-    path('summary/questions/<int:file_id>/', views.question_summary_page, name='question_summary_page'),
+    path('summary/questionwise/<int:file_id>/', views.question_summary_page, name='question_summary_page'),
 ]

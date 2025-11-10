@@ -2,8 +2,13 @@ import datetime
 import sqlite3
 import json
 import os
+from pathlib import Path
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "../../supplyChain.db")
+# Get the project root directory (supplychain_ai/)
+# This file is in: supplychain_ai/analysis_supplychain_ai/utils/db_utils.py
+# So we go up 3 levels to get to supplychain_ai/
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DB_PATH = str(PROJECT_ROOT / "supplyChain.db")
 
 
 def get_db_connection():
@@ -60,6 +65,11 @@ def _ensure_files_table(conn: sqlite3.Connection):
 
 
 def create_schema():
+    """Create database schema if it doesn't exist."""
+    # Ensure the directory exists
+    db_dir = Path(DB_PATH).parent
+    db_dir.mkdir(parents=True, exist_ok=True)
+    
     conn = get_db_connection()
     cur = conn.cursor()
 
